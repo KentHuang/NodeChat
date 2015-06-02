@@ -40,9 +40,9 @@ input {
   resize: none;
 }
 
-.chat-status {
+/*.chat-status {
   color: #bbb;
-}
+}*/
 
 .chat textarea,
 .chat-name {

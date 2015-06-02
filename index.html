@@ -12,7 +12,7 @@
       <div class='chat-messages'>
       </div>
       <textarea placeholder='Type your message'></textarea>
-      <div class='chat-status'>Status: <span>Idle</span></div>
+      <!-- <div class='chat-status'>Status: <span>Idle</span></div> -->
     </div>
 
     <script src='http://127.0.0.1:8080/socket.io/socket.io.js'></script>
@@ -48,6 +48,7 @@
 
                 //append to messages
                 messages.appendChild(message);
+                messages.scrollTop = messages.scrollHeight;
               }
             }
           })
@@ -66,8 +67,6 @@
           textarea.addEventListener('keyup', function(event) {
             if (event.which === 13 && event.shiftKey === false) {
               textarea.value = '';
-              messages.scrollTop = messages.scrollHeight;
-              console.log(messages.scrollTop);
             }
           })
         }
